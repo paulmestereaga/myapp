@@ -72,7 +72,7 @@
     <splash platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
-    <plugin name="net.roughshod.plugins.barcodescanner" spec="3.0.0" source="pgb" />
+    <plugin name="net.roughshod.plugins.barcodescanner"  source="pgb" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
