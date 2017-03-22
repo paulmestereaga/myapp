@@ -1,0 +1,75 @@
+<header id="header" class="clearfix" data-current-skin="white">
+    <ul class="header-inner">
+
+        <li id="menu-trigger" data-target="mainmenu" data-toggle-sidebar data-model-left="mactrl.sidebarToggle.left" data-ng-class="{ 'open': mactrl.sidebarToggle.left === true }">
+            <div class="line-wrap">
+                <div class="line top"></div>
+                <div class="line center"></div>
+                <div class="line bottom"></div>
+            </div>
+        </li>
+
+        <li class="logo">
+            <img width="200" data-ng-click="mactrl.sidebarStat($event)" src="img/logo.png" alt="">
+        </li>
+
+        <li class="pull-right">
+            <ul class="top-menu">
+
+
+
+            </ul>
+        </li>
+    </ul>
+
+
+    <!-- Top Search Content -->
+    <div id="top-search-wrap">
+        <div class="tsw-inner">
+            <i id="top-search-close" class="zmdi zmdi-arrow-left"></i>
+            <input type="text">
+        </div>
+    </div>
+</header>
+<section id="main">
+    <aside id="sidebar" data-ng-include="'template/sidebar-left.html'" data-model-left="mactrl.sidebarToggle.left" data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
+    <section id="content">
+        <div class="row">
+            <div class="card p-l-15 p-r-15">
+                <div class="card-header ch-alt m-b-20">
+                    <div class="media">
+                        <div class="pull-left">
+                            <img src="{{profile.avatar}}" class="lv-img-sm" data-ng-src="img/profile-pics/1.jpg" alt="">
+                        </div>
+                        <div class="media-body">
+                            <h2>{{profile.first_name +" "+ profile.last_name}}</h2>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li>
+                            <a href="#/">
+                                <i class="zmdi zmdi-undo"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-body card-padding">
+                    <h4>Amount : {{card.amount}} points.</h4>
+                    <h4>Parity : {{card.parity}}</h4>
+
+
+                    <div class="form-group">
+                        <div class="fg-line">
+                            <input class="form-control" name="amountValue" ng-model="selectedamount" type="number">
+                        </div>
+                    </div>
+
+                    <button data-ng-click="addPoints()" class="m-t-15 btn bgm-lightgreen btn-icon-text waves-effect btn-block"><i class="zmdi zmdi-plus"></i> Add {{selectedamount}} Points</button>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+</section>

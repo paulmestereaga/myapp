@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"/>
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+
+    <!-- Vendor CSS -->
+    <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
+    <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/app.min.1.css" rel="stylesheet">
+    <link href="css/app.min.2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+    <title>Hello World</title>
+</head>
+<body data-ng-app="easyprezzieApp" data-ng-controller="materialadminCtrl as mactrl">
+    <div  ng-show="isOnline == false" class="alert alert-danger m-0 text-center alertOffline" role="alert"><h4>APPLICATION OFFLINE !</h4></div>
+
+    <ng-view>
+        <section id="main">
+            <section id="content">
+                <div class="app page text-center" id="start">
+                    <img class="logo" src="img/logo-white.png"/>
+                </div>
+            </section>
+        </section>
+    </ng-view>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <!-- Javascript Libraries -->
+    <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+    <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+    <script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+
+
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/easyprezzieCtrl.js"></script>
+    <script src="js/services/easyprezzieServ.js"></script>
+    <script src="js/template.js"></script>
+
+
+</body>
+</html>

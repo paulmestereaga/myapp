@@ -1,0 +1,61 @@
+<header id="header" class="clearfix" data-current-skin="white">
+    <ul class="header-inner">
+
+        <li id="menu-trigger" data-target="mainmenu" data-toggle-sidebar data-model-left="mactrl.sidebarToggle.left" data-ng-class="{ 'open': mactrl.sidebarToggle.left === true }">
+            <div class="line-wrap">
+                <div class="line top"></div>
+                <div class="line center"></div>
+                <div class="line bottom"></div>
+            </div>
+        </li>
+
+        <li class="logo">
+            <img width="200" data-ng-click="mactrl.sidebarStat($event)" src="img/logo.png" alt="">
+        </li>
+
+        <li class="pull-right">
+            <ul class="top-menu">
+
+
+
+            </ul>
+        </li>
+    </ul>
+
+
+    <!-- Top Search Content -->
+    <div id="top-search-wrap">
+        <div class="tsw-inner">
+            <i id="top-search-close" class="zmdi zmdi-arrow-left"></i>
+            <input type="text">
+        </div>
+    </div>
+</header>
+<section id="main">
+    <aside id="sidebar" data-ng-include="'template/sidebar-left.html'" data-model-left="mactrl.sidebarToggle.left" data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
+    <section id="content">
+        <button ng-click="mactrl.qrRead()" class="btn bgm-orange btn-float waves-effect waves-circle waves-float dreaptajos"><i class="zmdi zmdi-camera-alt"></i></button>
+        <div class="profile-view">
+            <div class="bgm-white pm-overview c-overflow">
+                <div class="pv-header" style="background-image:url('http://easyprezzie.com/{{userInfo.profile.image}}');">
+                    <img src="http://easyprezzie.com/{{userInfo.profile.logo}}" class="pv-main" alt="">
+                </div>
+
+                <div class="pv-body">
+                    <h2>{{userInfo.profile.company_name}}</h2>
+
+                    <ul class="pv-contact p-t-20">
+                        <li><i class="zmdi zmdi-email p-r-10"></i> {{userInfo.user.email}}</li>
+                        <li><i class="zmdi zmdi-phone p-r-10"></i>{{userInfo.profile.phone}}</li>
+                    </ul>
+
+                    <ul class="pv-follow">
+                        <li>{{userInfo.paidSubscribersCount}} Paid subscribers</li>
+                        <li>{{userInfo.giftsCount}} Total gifts</li>
+                        <li>{{userInfo.subscribersCount}} Subscribers to gifts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
