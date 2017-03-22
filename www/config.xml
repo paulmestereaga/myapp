@@ -26,6 +26,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="android-installLocation" value="auto" />
+    <preference name="android-build-tool" value="gradle" />.
     <gap:plugin name="org.apache.cordova.battery-status"  source="npm"/>
     <gap:plugin name="org.apache.cordova.camera" source="npm" />
     <gap:plugin name="org.apache.cordova.media-capture" source="npm" />
