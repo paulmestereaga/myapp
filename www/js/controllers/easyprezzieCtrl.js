@@ -90,6 +90,7 @@ angular.module('easyprezzieApp')
                                 $location.path("/stampcard/"+userCode);
                             }, 0);
                         } else if((result.text.indexOf("fidelityAPI/") != -1) && (_fstop != -1)){
+                            console.log(result);
                             $timeout(function() {
                                 $location.path("/fidelitycard/"+fidelityCode);
                             }, 0);
