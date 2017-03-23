@@ -86,14 +86,23 @@ angular.module('easyprezzieApp')
                         var fidelityCode    = result.text.substring(_fstart, _fstop);
 
                         if((result.text.indexOf("stampcard/") != -1) && (_stop != -1)){
-                            $timeout(function() {
-                                $location.path("/stampcard/"+userCode);
-                            }, 0);
+                            if (result.data.error == true) {
+                                alert(result.data.message);
+                            } else {
+                                $timeout(function () {
+                                    $location.path("/stampcard/" + userCode);
+                                }, 0);
+                            }
                         } else if((result.text.indexOf("fidelityAPI/") != -1) && (_fstop != -1)){
                             console.log(result);
-                            $timeout(function() {
-                                $location.path("/fidelitycard/"+fidelityCode);
-                            }, 0);
+                            if (result.data.error == true) {
+                                alert(result.data.message);
+                            } else {
+                                $timeout(function() {
+                                    $location.path("/fidelitycard/"+fidelityCode);
+                                }, 0);
+                            }
+
                         }else {
                             alert("Code format not valid !");
                         }
