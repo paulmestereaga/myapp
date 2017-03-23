@@ -104,9 +104,14 @@ angular.module('easyprezzieApp')
 
             $http.get("http://easyprezzie.com/fidelityAPI/card/get/"+code+"?token="+userInfo.accessToken).then(function(result) {
                 console.log(result);
-                fidelityCard =  result.data.data;
-                $window.sessionStorage["fidelityCard"] = JSON.stringify(fidelityCard);
-                deferred.resolve(fidelityCard);
+                if (typeof result.data.error !== 'undefined' && result.data.error == true) {
+                    alert(result.data.message);
+                } else {
+                    fidelityCard =  result.data.data;
+                    $window.sessionStorage["fidelityCard"] = JSON.stringify(fidelityCard);
+                    deferred.resolve(fidelityCard);
+                }
+
             }, function(error) {
                 // todo: get new token then call fidelityCard
                 console.log(error);

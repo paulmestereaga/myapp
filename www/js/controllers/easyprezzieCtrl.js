@@ -86,7 +86,7 @@ angular.module('easyprezzieApp')
                         var fidelityCode    = result.text.substring(_fstart, _fstop);
 
                         if((result.text.indexOf("stampcard/") != -1) && (_stop != -1)){
-                         
+
                                 $timeout(function () {
                                     $location.path("/stampcard/" + userCode);
                                 }, 0);
