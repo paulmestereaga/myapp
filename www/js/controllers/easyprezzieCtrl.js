@@ -86,7 +86,7 @@ angular.module('easyprezzieApp')
                         var fidelityCode    = result.text.substring(_fstart, _fstop);
 
                         if((result.text.indexOf("stampcard/") != -1) && (_stop != -1)){
-                            if (result.data.error == true) {
+                            if (typeof result.data.error !== 'undefined' &&  result.data.error == true) {
                                 alert(result.data.message);
                             } else {
                                 $timeout(function () {
@@ -95,7 +95,7 @@ angular.module('easyprezzieApp')
                             }
                         } else if((result.text.indexOf("fidelityAPI/") != -1) && (_fstop != -1)){
                             console.log(result);
-                            if (result.data.error == true) {
+                            if ( typeof result.data.error !== 'undefined' &&  result.data.error == true) {
                                 alert(result.data.message);
                             } else {
                                 $timeout(function() {
