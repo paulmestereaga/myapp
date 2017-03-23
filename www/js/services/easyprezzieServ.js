@@ -68,9 +68,16 @@ angular.module('easyprezzieApp')
 
             $http.get("http://easyprezzie.com/stampAPI/card/get/"+code+"?token="+userInfo.accessToken).then(function(result) {
                 console.log(result);
-                stampCard =  result.data.data;
-                $window.sessionStorage["stampCard"] = JSON.stringify(stampCard);
-                deferred.resolve(stampCard);
+                if (typeof result.data.error !== 'undefined' && result.data.error == true) {
+                    alert(result.data.message);
+                    deferred.reject(result);
+                } else {
+                    stampCard =  result.data.data;
+                    $window.sessionStorage["stampCard"] = JSON.stringify(stampCard);
+                    deferred.resolve(stampCard);
+                }
+
+
             }, function(error) {
                 // todo: get new token then call getStampCard
                 console.log(error);
@@ -106,6 +113,7 @@ angular.module('easyprezzieApp')
                 console.log(result);
                 if (typeof result.data.error !== 'undefined' && result.data.error == true) {
                     alert(result.data.message);
+                    deferred.reject(result);
                 } else {
                     fidelityCard =  result.data.data;
                     $window.sessionStorage["fidelityCard"] = JSON.stringify(fidelityCard);

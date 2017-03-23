@@ -136,6 +136,7 @@ angular.module('easyprezzieApp')
                             $window.alert("Token expired !");
                             $scope.tokenExpired();
                         }
+                        $location.path("/materialadmin/");
                         console.log(error);
                     });
             } else {
@@ -258,6 +259,7 @@ angular.module('easyprezzieApp')
                             $scope.tokenExpired();
                         }
                         console.log(error);
+                        $location.path("/materialadmin/");
                     });
             } else {
                 alert("Your application is offline !");
