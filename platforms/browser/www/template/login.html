@@ -1,0 +1,40 @@
+<section id="main">
+    <section id="content">
+        <div class="app page text-center" id="start">
+            <img class="logo" src="img/logo-white.png"/>
+            <!-- Login -->
+            <div class="lc-block toggled" id="l-login">
+                <div class="input-group m-b-20">
+                    <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                    <div class="fg-line">
+                        <input type="text" ng-model="email" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="input-group m-b-20">
+                    <span class="input-group-addon"><i class="zmdi zmdi-male"></i></span>
+                    <div class="fg-line">
+                        <input type="password" ng-model="password" class="form-control" placeholder="Password">
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="" ng-model="keepMeLogIn">
+                        <i class="input-helper"></i>
+                        Keep me signed in
+                    </label>
+                </div>
+                <div class=" spacer30">
+                    <button class="btn btn-lg btn-primary waves-effect" ng-click="login()" id="scanTestId">Login</button>
+                </div>
+                <!--<ul class="login-navigation">-->
+                    <!--<li data-block="#l-register" class="bgm-red">Register</li>-->
+                    <!--<li data-block="#l-forget-password" class="bgm-orange">Forgot Password?</li>-->
+                <!--</ul>-->
+            </div>
+        </div>
+    </section>
+</section>

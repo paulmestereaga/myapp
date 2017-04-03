@@ -1,0 +1,93 @@
+<header id="header" class="clearfix" data-current-skin="white">
+    <ul class="header-inner">
+
+        <li id="menu-trigger" data-target="mainmenu" data-toggle-sidebar data-model-left="mactrl.sidebarToggle.left" data-ng-class="{ 'open': mactrl.sidebarToggle.left === true }">
+            <div class="line-wrap">
+                <div class="line top"></div>
+                <div class="line center"></div>
+                <div class="line bottom"></div>
+            </div>
+        </li>
+
+        <li class="logo">
+            <img width="200" data-ng-click="mactrl.sidebarStat($event)" src="img/logo.png" alt="">
+        </li>
+
+        <li class="pull-right">
+            <ul class="top-menu">
+
+
+
+            </ul>
+        </li>
+    </ul>
+
+
+    <!-- Top Search Content -->
+    <div id="top-search-wrap">
+        <div class="tsw-inner">
+            <i id="top-search-close" class="zmdi zmdi-arrow-left"></i>
+            <input type="text">
+        </div>
+    </div>
+</header>
+<section id="main">
+    <aside id="sidebar" data-ng-include="'template/sidebar-left.html'" data-model-left="mactrl.sidebarToggle.left" data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
+    <section id="content">
+        <div class="row">
+            <div class="card p-l-15 p-r-15">
+                <div class="card-header ch-alt m-b-20">
+                    <div class="media">
+                        <div class="pull-left">
+                            <img src="{{profile.avatar}}" class="lv-img-sm" data-ng-src="img/profile-pics/1.jpg" alt="">
+                        </div>
+                        <div class="media-body">
+                            <h2>{{profile.first_name +" "+ profile.last_name}}</h2>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li>
+                            <a href="#/">
+                                <i class="zmdi zmdi-undo"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div ng-show="redeem == 0" class="card-body card-padding">
+                    <h4>{{card.name}}</h4>
+                    <p>{{card.description}}</p>
+                    <h4>You stamped {{card.stamp_complete}} from {{card.stamp_max}} stamps.</h4>
+                    <div class="p-t-10 p-b-10">
+                        <div class="lv-title m-b-5">The card "{{card.name}}" is complete {{card_percent}} %.</div>
+
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="{{card_percent}}" aria-valuemin="0" aria-valuemax="100" style="width:{{card_percent}}%">
+                                <span class="sr-only">{{card_percent}}% Complete (success)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="fg-line">
+                            <div class="select">
+                                <select class="form-control" ng-model="selectedItem" ng-options="item.name for item in card_stamps">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button data-ng-click="removeStamps()" class="m-t-15 btn bgm-deeporange btn-icon-text waves-effect btn-block"><i class="zmdi zmdi-minus"></i> Remove {{selectedItem.value}} Stamp</button>
+                    <button ng-if="complete == 0" data-ng-click="addStamps()" class="m-t-15 btn bgm-lightgreen btn-icon-text waves-effect btn-block"><i class="zmdi zmdi-plus"></i> Add {{selectedItem.value}} Stamp</button>
+                    <button ng-if="complete == 1" data-ng-click="redeemCard()" class="m-t-15 btn btn-primary btn-icon-text waves-effect btn-block"><i class="zmdi zmdi-check"></i> Redeem</button>
+
+                </div>
+                <div ng-show="redeem == 1" class="card-body card-padding">
+                    <h4>{{card.name}}</h4>
+                    <h4>The card is already redeemed ! </h4>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</section>

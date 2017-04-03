@@ -12,16 +12,14 @@ angular.module('easyprezzieApp')
         function login(email, password, keepMeLogIn) {
             var deferred = $q.defer();
 
-            console.log(email);
-            console.log(password);
-            console.log(keepMeLogIn);
+
 
             $http.post("http://easyprezzie.com/api/authenticate", {
                 email: email,
                 password: password
             }).then(function(result) {
-                console.log('login result');
-                console.log(result);
+                //console.log('login result');
+                //console.log(result);
                 userInfo = {
                     keepMeLogIn: keepMeLogIn,
                     accessToken: result.data.token,
@@ -64,10 +62,10 @@ angular.module('easyprezzieApp')
         function getStampCard(code) {
             var deferred = $q.defer();
 
-            console.log(code);
+            //console.log(code);
 
             $http.get("http://easyprezzie.com/stampAPI/card/get/"+code+"?token="+userInfo.accessToken).then(function(result) {
-                console.log(result);
+                //console.log(result);
                 if (typeof result.data.error !== 'undefined' && result.data.error == true) {
                     alert(result.data.message);
                     deferred.reject(result);
@@ -80,7 +78,7 @@ angular.module('easyprezzieApp')
 
             }, function(error) {
                 // todo: get new token then call getStampCard
-                console.log(error);
+                //console.log(error);
                 deferred.reject(error);
             });
 
@@ -90,10 +88,10 @@ angular.module('easyprezzieApp')
         function update(_item) {
             var deferred = $q.defer();
 
-            console.log(_item);
+            //console.log(_item);
 
             $http.get("http://easyprezzie.com/stampAPI/card/update/"+_item.id+"?token="+userInfo.accessToken+"&sc_complete='"+_item.stamps+"'").then(function(result) {
-                console.log(result);
+                //console.log(result);
                 stampCard =  result.data.data;
                 $window.sessionStorage["stampCard"] = JSON.stringify(stampCard);
                 deferred.resolve(stampCard);
@@ -107,10 +105,10 @@ angular.module('easyprezzieApp')
         function getFidelityCard(code) {
             var deferred = $q.defer();
 
-            console.log(code);
+            //console.log(code);
 
             $http.get("http://easyprezzie.com/fidelityAPI/card/get/"+code+"?token="+userInfo.accessToken).then(function(result) {
-                console.log(result);
+                //console.log(result);
                 if (typeof result.data.error !== 'undefined' && result.data.error == true) {
                     alert(result.data.message);
                     deferred.reject(result);
@@ -122,7 +120,7 @@ angular.module('easyprezzieApp')
 
             }, function(error) {
                 // todo: get new token then call fidelityCard
-                console.log(error);
+                //console.log(error);
                 deferred.reject(error);
             });
 
@@ -133,10 +131,10 @@ angular.module('easyprezzieApp')
         function updateFidelityCard(_item) {
             var deferred = $q.defer();
 
-            console.log(_item);
+            //console.log(_item);
 
             $http.get("http://easyprezzie.com/fidelityAPI/card/update/"+_item.id+"?token="+userInfo.accessToken+"&amount='"+_item.amount+"'").then(function(result) {
-                console.log(result);
+                //console.log(result);
                 fidelityCard =  result.data.data;
                 $window.sessionStorage["fidelityCard"] = JSON.stringify(fidelityCard);
                 deferred.resolve(fidelityCard);
@@ -151,7 +149,7 @@ angular.module('easyprezzieApp')
             var deferred = $q.defer();
 
             $http.get("http://easyprezzie.com/stampAPI/card/redeem/"+stampCard.card.id+"?token="+userInfo.accessToken).then(function(result) {
-                console.log(result);
+                //console.log(result);
                 stampCard =  result.data.data;
                 $window.sessionStorage["stampCard"] = JSON.stringify(stampCard);
                 deferred.resolve(stampCard);

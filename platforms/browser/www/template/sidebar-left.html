@@ -1,0 +1,43 @@
+<div class="sidebar-inner c-overflow">
+    <div class="profile-menu">
+        <a href="" toggle-submenu style="background-image:url('http://easyprezzie.com/{{userInfo.profile.image}}');">
+            <div class="profile-pic">
+                <img src="http://easyprezzie.com/{{userInfo.profile.logo}}" alt="">
+            </div>
+
+            <div class="profile-info">
+                {{userInfo.profile.first_name + ' '+ userInfo.profile.last_name}}
+
+                <!--<i class="zmdi zmdi-caret-down"></i>-->
+            </div>
+        </a>
+
+        <!--<ul class="main-menu">-->
+            <!--<li>-->
+                <!--<a href="#/profile" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-account"></i> View Profile</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#/privacy"><i class="zmdi zmdi-input-antenna"></i> Privacy Settings</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#/settings"><i class="zmdi zmdi-settings"></i> Settings</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#/" data-ng-click="mactrl.sidebarStat($event); mactrl.logout()"><i class="zmdi zmdi-time-restore"></i> Logout</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    </div>
+
+    <ul class="main-menu">
+
+        <li data-ui-sref-active="active">
+            <a href="#/" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-home"></i> Home</a>
+        </li>
+        <li data-ui-sref-active="active">
+            <a href="" data-ng-click="mactrl.sidebarStat($event); mactrl.qrRead()"><i class="zmdi zmdi-camera-alt"></i> Scan</a>
+        </li>
+        <li data-ui-sref-active="active">
+            <a href="#/" data-ng-click="mactrl.sidebarStat($event); mactrl.logout()"><i class="zmdi zmdi-time-restore"></i> Logout</a>
+        </li>
+    </ul>
+</div>

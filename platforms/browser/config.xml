@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.easyprezzie.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="BarcodeScanner">
+        <param name="browser-package" value="BarcodeScanner" />
+    </feature>
+    <name>EasyPrezzie</name>
+    <description>
+        Free gifts offered by the local businesses in your area.
+    </description>
+    <author email="contact@easyprezzie.com" href="http://easyprezzie.com">
+        EasyPrezzie Team
+    </author>
+    <content src="index.html" />
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="false" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="1000" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="android-build-tool" value="gradle" />
+    <gap:plugin name="org.apache.cordova.battery-status" source="npm" />
+    <gap:plugin name="org.apache.cordova.camera" source="npm" />
+    <gap:plugin name="org.apache.cordova.media-capture" source="npm" />
+    <gap:plugin name="org.apache.cordova.console" source="npm" />
+    <gap:plugin name="org.apache.cordova.contacts" source="npm" />
+    <gap:plugin name="org.apache.cordova.device" source="npm" />
+    <gap:plugin name="org.apache.cordova.device-motion" source="npm" />
+    <gap:plugin name="org.apache.cordova.device-orientation" source="npm" />
+    <gap:plugin name="org.apache.cordova.dialogs" source="npm" />
+    <gap:plugin name="org.apache.cordova.file" source="npm" />
+    <gap:plugin name="org.apache.cordova.file-transfer" source="npm" />
+    <gap:plugin name="org.apache.cordova.geolocation" source="npm" />
+    <gap:plugin name="org.apache.cordova.globalization" source="npm" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
+    <gap:plugin name="org.apache.cordova.media" source="npm" />
+    <gap:plugin name="org.apache.cordova.network-information" source="npm" />
+    <gap:plugin name="org.apache.cordova.splashscreen" source="npm" />
+    <gap:plugin name="org.apache.cordova.vibration" source="npm" />
+    <icon src="icon.png" />
+    <icon platform="android" qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
+    <icon platform="android" qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />
+    <icon platform="android" qualifier="hdpi" src="res/icon/android/icon-72-hdpi.png" />
+    <icon platform="android" qualifier="xhdpi" src="res/icon/android/icon-96-xhdpi.png" />
+    <icon platform="blackberry" src="res/icon/blackberry/icon-80.png" />
+    <icon gap:state="hover" platform="blackberry" src="res/icon/blackberry/icon-80.png" />
+    <icon height="57" platform="ios" src="res/icon/ios/icon-57.png" width="57" />
+    <icon height="72" platform="ios" src="res/icon/ios/icon-72.png" width="72" />
+    <icon height="114" platform="ios" src="res/icon/ios/icon-57-2x.png" width="114" />
+    <icon height="144" platform="ios" src="res/icon/ios/icon-72-2x.png" width="144" />
+    <icon platform="webos" src="res/icon/webos/icon-64.png" />
+    <icon platform="winphone" src="res/icon/windows-phone/icon-48.png" />
+    <icon gap:role="background" platform="winphone" src="res/icon/windows-phone/icon-173-tile.png" />
+    <splash platform="android" qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+    <splash platform="android" qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+    <splash platform="android" qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+    <splash platform="android" qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+    <splash platform="blackberry" src="res/screen/blackberry/screen-225.png" />
+    <splash height="480" platform="ios" src="res/screen/ios/screen-iphone-portrait.png" width="320" />
+    <splash height="960" platform="ios" src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
+    <splash height="1136" platform="ios" src="res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
+    <splash height="1024" platform="ios" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
+    <splash height="768" platform="ios" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
+    <splash platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+</widget>

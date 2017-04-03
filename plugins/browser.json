@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "org.easyprezzie.app"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "org.easyprezzie.app"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "org.easyprezzie.app"
+        }
+    },
+    "dependent_plugins": {}
+}

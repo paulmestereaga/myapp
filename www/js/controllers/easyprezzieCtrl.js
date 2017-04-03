@@ -14,7 +14,7 @@ angular.module('easyprezzieApp')
                         $location.path("/home");
                     }, function (error) {
                         $window.alert("Invalid credentials");
-                        console.log(error);
+                        //console.log(error);
                     });
             } else {
                 alert("Your application is offline !");
@@ -64,11 +64,11 @@ angular.module('easyprezzieApp')
 
             authenticationSvc.logout()
                 .then(function (result) {
-                    console.log('logout');
+                    //console.log('logout');
                     $scope.userInfo = null;
                     $location.path("/login");
                 }, function (error) {
-                    console.log(error);
+                  //  console.log(error);
                 });
         };
 
@@ -118,7 +118,7 @@ angular.module('easyprezzieApp')
         $scope.userInfo = auth;
         $scope.isHeader = true;
 
-        console.log('test c');
+        //console.log('test c');
         $scope.cardCode = $routeParams.cod;
         $scope.card = "";
         $scope.card_percent = 0;
@@ -137,7 +137,7 @@ angular.module('easyprezzieApp')
                             $scope.tokenExpired();
                         }
                         $location.path("/materialadmin/");
-                        console.log(error);
+                        //console.log(error);
                     });
             } else {
                 alert("Your application is offline !");
@@ -173,13 +173,13 @@ angular.module('easyprezzieApp')
 
         $scope.removeStamps = function(){
             var _id = $scope.card.id;
-            console.log($scope.activItem);
+            //console.log($scope.activItem);
             var _stamps = parseInt($scope.selectedItem.value);
-            console.log(_stamps);
+            //console.log(_stamps);
             var _crt = parseInt($scope.card.stamp_complete);
-            console.log(_crt);
+            //console.log(_crt);
             if(_stamps > _crt)_stamps =_crt;
-            console.log(_stamps);
+           // console.log(_stamps);
 
             $scope.updateCard({id:_id, stamps: (_crt -_stamps)});
         };
@@ -227,13 +227,13 @@ angular.module('easyprezzieApp')
         $scope.tokenExpired = function(){
             authenticationSvc.logout()
                 .then(function (result) {
-                    console.log('logout');
+                    //console.log('logout');
                     $scope.userInfo = null;
                     $timeout(function() {
                         $location.path("/login");
                     }, 0);
                 }, function (error) {
-                    console.log(error);
+                    //console.log(error);
                 });
         }
 
@@ -258,7 +258,7 @@ angular.module('easyprezzieApp')
                             $window.alert("Token expired !");
                             $scope.tokenExpired();
                         }
-                        console.log(error);
+                        //console.log(error);
                         $location.path("/materialadmin/");
                     });
             } else {
@@ -296,13 +296,13 @@ angular.module('easyprezzieApp')
         $scope.tokenExpired = function(){
             authenticationSvc.logout()
                 .then(function (result) {
-                    console.log('logout');
+                    //console.log('logout');
                     $scope.userInfo = null;
                     $timeout(function() {
                         $location.path("/login");
                     }, 0);
                 }, function (error) {
-                    console.log(error);
+                    //console.log(error);
                 });
         };
 
