@@ -27,24 +27,20 @@
     <preference name="android-minSdkVersion" value="14" />
     <preference name="android-installLocation" value="auto" />
     <preference name="android-build-tool" value="gradle" />.
-    <gap:plugin name="org.apache.cordova.battery-status"  source="npm"/>
-    <gap:plugin name="org.apache.cordova.camera" source="npm" />
-    <gap:plugin name="org.apache.cordova.media-capture" source="npm" />
-    <gap:plugin name="org.apache.cordova.console"  source="npm" />
-    <gap:plugin name="org.apache.cordova.contacts"  source="npm" />
-    <gap:plugin name="org.apache.cordova.device" source="npm"  />
-    <gap:plugin name="org.apache.cordova.device-motion" source="npm"  />
-    <gap:plugin name="org.apache.cordova.device-orientation"  source="npm" />
-    <gap:plugin name="org.apache.cordova.dialogs" source="npm"  />
-    <gap:plugin name="org.apache.cordova.file" source="npm"  />
-    <gap:plugin name="org.apache.cordova.file-transfer" source="npm"  />
-    <gap:plugin name="org.apache.cordova.geolocation"  source="npm" />
-    <gap:plugin name="org.apache.cordova.globalization" source="npm"  />
-    <gap:plugin name="org.apache.cordova.inappbrowser" source="npm"  />
-    <gap:plugin name="org.apache.cordova.media"  source="npm" />
-    <gap:plugin name="org.apache.cordova.network-information"  source="npm" />
-    <gap:plugin name="org.apache.cordova.splashscreen"  source="npm" />
-    <gap:plugin name="org.apache.cordova.vibration"  source="npm" />
+    <gap:plugin name="cordova-plugin-battery-status"  source="npm"/>
+    <gap:plugin name="cordova-plugin-camera" source="npm" />
+    <gap:plugin name="cordova-plugin-media-capture" source="npm" />
+    <gap:plugin name="cordova-plugin-console"  source="npm" />
+    <gap:plugin name="cordova-plugin-device" source="npm"  />
+
+    <gap:plugin name="cordova-plugin-device-orientation"  source="npm" />
+    <gap:plugin name="cordova-plugin-dialogs" source="npm"  />
+    <gap:plugin name="cordova-plugin-globalization" source="npm"  />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm"  />
+    <gap:plugin name="cordova-plugin-media"  source="npm" />
+    <gap:plugin name="cordova-plugin-network-information"  source="npm" />
+    <gap:plugin name="cordova-plugin-splashscreen"  source="npm" />
+    <gap:plugin name="cordova-plugin-vibration"  source="npm" />
     <icon src="icon.png" />
     <icon platform="android" qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
     <icon platform="android" qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />
