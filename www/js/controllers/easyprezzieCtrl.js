@@ -75,7 +75,7 @@ angular.module('easyprezzieApp')
         this.qrRead = function(){
             if(navigator.onLine){
                 cordova.plugins.barcodeScanner.scan(
-                    function (result) {
+                    function (result) {  
                         var _start      = result.text.indexOf("stampcard/")+"stampcard/".length;
                         var _stop       = result.text.indexOf("/view");
                         var userCode    = result.text.substring(_start, _stop);
@@ -132,7 +132,10 @@ angular.module('easyprezzieApp')
                     .then(function (result) {
                         $scope.updateGraphic(result);
                     }, function (error) {
-                        if(error.data.error == "token_expired"){
+                        if(error.data.error === undefined){							
+                            alert("Invalid card !");
+						} else
+						if(error.data.error == "token_expired"){
                             $window.alert("Token expired !");
                             $scope.tokenExpired();
                         }
@@ -161,6 +164,9 @@ angular.module('easyprezzieApp')
                     .then(function (result) {
                         $scope.updateGraphic(result);
                     }, function (error) {
+						if(error.data.error === undefined){							
+                            alert("Invalid card !");
+						} else 
                         if(error.data.error == "token_expired"){
                             $window.alert("Token expired !");
                             $scope.tokenExpired();
@@ -254,6 +260,9 @@ angular.module('easyprezzieApp')
                     .then(function (result) {
                         $scope.updateGraphic(result);
                     }, function (error) {
+						if(error.data.error === undefined){							
+                            alert("Invalid card !");
+						} else 
                         if(error.data.error == "token_expired"){
                             $window.alert("Token expired !");
                             $scope.tokenExpired();
