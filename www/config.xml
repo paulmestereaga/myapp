@@ -50,11 +50,11 @@
     <icon platform="blackberry" gap:state="hover" src="res/icon/blackberry/icon-80.png" />
     <icon platform="ios" height="57" src="res/icon/ios/icon-57.png" width="57" />
     <icon platform="ios" height="72" src="res/icon/ios/icon-72.png" width="72" />
-    <icon platform="ios" height="76" src="res/icon/ios/icon-76.png" width="72" />
+    <icon platform="ios" height="76" src="res/icon/ios/icon-76.png" width="76" />
     <icon platform="ios" height="114" src="res/icon/ios/icon-57-2x.png" width="114" />
     <icon platform="ios" height="144" src="res/icon/ios/icon-72-2x.png" width="144" />
-    <icon platform="ios" height="152" src="res/icon/ios/icon-76-2x.png" width="144" />
-    <icon platform="ios" height="120" src="res/icon/ios/icon-120.png" width="144" />
+    <icon platform="ios" height="152" src="res/icon/ios/icon-76-2x.png" width="152" />
+    <icon platform="ios" height="120" src="res/icon/ios/icon-120.png" width="120" />
     <icon platform="webos" src="res/icon/webos/icon-64.png" />
     <icon platform="winphone" src="res/icon/windows-phone/icon-48.png" />
     <icon platform="winphone" gap:role="background" src="res/icon/windows-phone/icon-173-tile.png" />
