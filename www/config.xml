@@ -41,6 +41,12 @@
     <gap:plugin name="cordova-plugin-network-information"  source="npm" />
     <gap:plugin name="cordova-plugin-splashscreen"  source="npm" />
     <gap:plugin name="cordova-plugin-vibration"  source="npm" />
+    <gap:config-file platform="ios" parent="NSCameraUsageDescription" overwrite="true">
+        <string>This app requires access to the camera. We are using the Camera to be able to scan barcodes.</string>
+    </gap:config-file>
+    <gap:config-file platform="ios" parent="NSPhotoLibraryUsageDescription" overwrite="true">
+        <string>This app needs access to photos.</string>
+    </gap:config-file>
     <icon src="icon.png" />
     <icon platform="android" qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
     <icon platform="android" qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />
